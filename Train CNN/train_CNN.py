@@ -171,19 +171,16 @@ for n in range(epochs):
         losses.append(loss)
         if i%25 == 0:
           torch.cuda.empty_cache()
-          gc.collect()
         #if i == max_batches:
         #    break
     # Val Metrics 
     if torch.cuda.is_available():
       torch.cuda.empty_cache()
-      gc.collect()
     val_losses = []
     for _, val_X, val_Y in ch_dataloader_val:
         val_loss = model.get_loss(val_X, val_Y)
         val_losses.append(val_loss)
         torch.cuda.empty_cache()
-        gc.collect()
     val_loss = sum(val_losses)/len(val_losses)
     avg_loss = sum(losses)/len(losses)
     if val_loss < min_val_loss:
