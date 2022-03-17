@@ -7,7 +7,7 @@ I strongly advise using a pre-trained CNN for feature extraction (I used ResNet)
 If you wish to take this model further I would suggest using optical flow as an additional input source, trying different pre-trained CNNs for feature extraction, and reducing the size of the last kernel to 1. Another thing you could do is predict the difference between images rather than images themselves. But I found that this improves realism but not the score.
 # Data Loading 
 
-I found loading the data rather cubersome. So created a system the saves the numpy arrays in pickle files and loads them in "chunks" of about 1-4GB. I have included a link to about 30GB worth of these chunks. I have also inlcude a script that loads these chunks as needed in a PyTorch dataset object to avoid running out of RAM.
+I found loading the data rather cubersome. So I created a system that saves the numpy arrays in pickle files and loads them in "chunks" of about 1-4GB. I have included a link to about 30GB worth of these chunks. I have also inlcude a script that loads these chunks as needed in a PyTorch dataset object to avoid running out of RAM.
 You can access the pre-processed data from: https://drive.google.com/drive/folders/137awFy3PjKpUQUhEULU75y0B_mUjwjzi?usp=sharing
 
 # Optical flow model based on Deepmind's Perceiver
