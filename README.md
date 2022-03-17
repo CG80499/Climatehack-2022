@@ -11,7 +11,6 @@ I found loading the data rather cubersome. So created a system the saves the num
 
 # Optical flow model based on Deepmind's Perceiver
 <img width="661" alt="Screenshot 2022-03-16 175511" src="https://user-images.githubusercontent.com/94075036/158827253-42c30173-7d84-44d6-9dae-f7e3da8278a1.png">
-*The first row is the predictions from the optical flow model and the second row is the actual images.*
-
+The first row is the predictions from the optical flow model and the second row is the actual images.
 
 This model works similarly to optical flow in the included examples apart from that that instead of using an OpenCV implementation it uses Deepmind's Perceiver network. The results from using just optical flow are actually fairly good. I tried averaging these images with my CNN images and achieved fairly good results in testing granted I couldn't replicate them in DOXA. I also included a script that just computes the optical flow between 2 128x128 grayscale images. I think that you could get some very strong results by putting the optical flow from the perceiver into another network.
