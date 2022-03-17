@@ -8,6 +8,7 @@ If you wish to take this model further I would suggest using optical flow as an 
 # Data Loading 
 
 I found loading the data rather cubersome. So created a system the saves the numpy arrays in pickle files and loads them in "chunks" of about 1-4GB. I have included a link to about 30GB worth of these chunks. I have also inlcude a script that loads these chunks as needed in a PyTorch dataset object to avoid running out of RAM.
+You can access the pre-processed data from: https://drive.google.com/drive/folders/137awFy3PjKpUQUhEULU75y0B_mUjwjzi?usp=sharing
 
 # Optical flow model based on Deepmind's Perceiver
 <img width="661" alt="Screenshot 2022-03-16 175511" src="https://user-images.githubusercontent.com/94075036/158827253-42c30173-7d84-44d6-9dae-f7e3da8278a1.png">
